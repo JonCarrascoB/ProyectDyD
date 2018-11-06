@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+</head>
+<body>
+    <audio id="dyd" src="C:\Users\Jon\Pictures\Cuadros\D&D\Epic Music - Inmediate Music - Archangel.mp3" preload="auto" autoplay loop></audio>
+    <div>
+        <button onclick="document.getElementById('dyd').play()">Reproducir el Audio</button>
+        <button onclick="document.getElementById('dyd').pause()">Pausar el Audio</button>
+        <button onclick="document.getElementById('dyd').volume+=0.1">Aumentar el Volumen</button>
+        <button onclick="document.getElementById('dyd').volume-=0.1">Disminuir el Volumen</button>
+    </div>
+
+    <div class="header_form">
+        <div id="menu">
+            <ul>
+                <li><a href="homepage.html">HOME</a>HOME</li>
+                <li>CATALOG</li>
+                <li>SHOP</li>
+                <li>SEARCH</li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+        <p>Bienvenido a la base de datos de Dungeons & Dragons. Rellene los datos de contacto siguietes (los marcados * son campos obligatorios).</p>
+    </div>
+    <div class="form">
+        <form id="search">
+            Correo Electronico:
+            <input type="text" id="name" /> *
+            Contraseña:
+            <input type="password" id="password" /> *
+            Repita la contraseña:
+            <input type="password" id="password" /> *<br />
+            <br />
+            Nombre:
+            <input type="text" id="name" /> *
+            Primer Apellido:
+            <input type="text" id="firstAddress" /> *
+            Segundo Apellido:
+            <input type="text" id="secondAddress" /> 
+            <br />
+            Introduzca su genero:<br />
+            <input type="radio" name="gender" value="Varon" />Varon
+            <input type="radio" name="gender" value="Mujer" />Mujer
+            <input type="radio" name="gender" value="Otro" />Otro<br />
+            <br />
+
+            <br />
+            Fecha nacimiento:
+            <input type="text" id="age" />
+
+            <br />
+
+
+            <input type="button" value="Enlist" onclick="enlist()" />
+            <input type="reset" />
+        </form>
+     </div>
+            <div class="lista_reclutas">
+                <ul id="destino">
+                    <li></li>
+                </ul>
+                <img id="your destin" />
+            </div>
+            <div class="footer_f">
+                
+            </div>
+
+
+            <script src="app.js"></script>
+</body>
+</html>
