@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Search in Our Database</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
 <body>
@@ -16,62 +16,80 @@
         <button onclick="document.getElementById('dyd').volume-=0.1">Disminuir el Volumen</button>
     </div>
 
-    <div class="header_form">
-        <div id="menu_form">
-            <ul>
+    <header class="jumbotron" id="header_form">
+        <img id="image_form1" src="C:\Users\Jon\Pictures\Cuadros\D&D\header_form.jpg" alt="" title="header-image" />
+    </header>
+    <div class="container" id="navbar_form">
+        <nav class="row">
+            <ul class="nav nav-pill col-md-08 col-md-08-offset">
                 <li><a href="homepage.html">HOME</a></li>
                 <li><a href="http://dnd.wizards.com/">CATALOG</a></li>
                 <li><a href="http://dnd.wizards.com/products/catalog">SHOP</a></li>
                 <li>SEARCH</li>
                 <li><a href="contact.html">CONTACT US</a></li>
             </ul>
-        </div>
-        <p>Bienvenido a la base de datos de Dungeons & Dragons. Rellene los datos de contacto siguietes (los marcados * son campos obligatorios).</p>
+        </nav> 
     </div>
-    <div class="form">
-        <form id="search">
-            Correo Electronico:
-            <input type="text" id="name" /> *
-            Contraseña:
-            <input type="password" id="password" /> *
-            Repita la contraseña:
-            <input type="password" id="password" /> *<br />
-            <br />
-            Nombre:
-            <input type="text" id="name" /> *
-            Primer Apellido:
-            <input type="text" id="firstAddress" /> *
-            Segundo Apellido:
-            <input type="text" id="secondAddress" /> 
-            <br />
-            Introduzca su genero:<br />
-            <input type="radio" name="gender" value="Varon" />Varon
-            <input type="radio" name="gender" value="Mujer" />Mujer
-            <input type="radio" name="gender" value="Otro" />Otro<br />
-            <br />
+     <div class="container" id="article_form">
+         <nav class="row">
+             <div class="col-md-03" id="asideleft_form">
+                 <br />
+                 <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\logoJoker.png" alt="logo_shop" title="Logo Joker" />
+                 <br />
+                 <a href="https://www.jokercomics.es/">https://www.jokercomics.es/</a><br />
+                 <br />
+             </div>
+             <div class="col-md-06 col-md-06-offset" id="main_form">
+                 <p id="par_form1">Bienvenido a la base de datos de Dungeons & Dragons.</p>
+                 <br />
+                 <select id="" onchange="selectPart()">
+                     <option value="classes">Clases</option>
+                     <option value="races">Razas</option>
+                     <option value="equipment">Equipamiento</option>
+                     <option value="monsters">Bestiario</option>
+                     <option value="skills">Habilidades</option>
+                 </select>
 
-            <br />
-            Fecha nacimiento:
-            <input type="text" id="age" />
+             </div>
+             <div class="col-md-03 col-md-03-offset" id="asideright_form">
 
-            <br />
-
-
-            <input type="button" value="Enlist" onclick="enlist()" />
-            <input type="reset" />
-        </form>
+             </div>
+         </nav>
      </div>
+        <div class="header_form_par" style="clear:both;">
+            
+        </div>
+        <div class="">
+            <div class="asideleft_form">
+                
+            </div>
+
+            <div class="form">
+                <form id="search">
+                    
+
+                </form>
+            </div>
+
             <div class="lista_reclutas">
                 <ul id="destino">
                     <li></li>
                 </ul>
                 <img id="your destin" />
             </div>
-            <div class="footer_f">
-                
+
+            <div class="asideright_form">
+
             </div>
 
+        </div>
 
-            <script src="app.js"></script>
+
+        <div class="footer_form">
+
+        </div>
+
+
+        <script src="app.js"></script>
 </body>
 </html>

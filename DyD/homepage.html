@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Homepage</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="Style.css" />
 
 </head>
@@ -16,78 +16,109 @@
         <button onclick="document.getElementById('dyd').volume+=0.1">Aumentar el Volumen</button>
         <button onclick="document.getElementById('dyd').volume-=0.1">Disminuir el Volumen</button>
     </div>
-    <div class="header_home">
-        <img id="dyd_home1" src="C:\Users\Jon\Pictures\Cuadros\D&D\header_home.jpg" alt="dyd_pjs" title="" />
-        <div id="login">
-            <input type="text" id="user" />
-            <input type="text" id="password" />
-            <input type="submit" />
-            <a href="form.html">Sing Up</a>
+    <div class="container" id="header_home">
+        <div class="row">
+            <div class="jumbotron">
+                <img id="dyd_home1" src="C:\Users\Jon\Pictures\Cuadros\D&D\header_home.jpg" alt="dyd_pjs" title="Home-Image" />
+            </div>
         </div>
-        <div id="menu_home">
-            <ul>
+    </div>
+    <div class="container" id="nav_home">
+        <header class="row">
+            <div class="col-md-04" id="login">
+                <input type="text" id="user" />
+                <input type="text" id="password" />
+                <input type="submit" />
+                <a href="form.html">Sing Up</a>
+            </div>
+            <ul class="nav nav-pill col-md-08 col-md-offset-08" id="menu_home">
                 <li>HOME</li>
                 <li><a href="http://dnd.wizards.com/">CATALOG</a></li>
                 <li><a href="http://dnd.wizards.com/products/catalog">SHOP</a></li>
                 <li><a href="form.html">SEARCH</a></li>
                 <li><a href="contact.html">CONTACT US</a></li>
             </ul>
-        </div>
 
-    </div>
-    <div style="clear:both;">
-        <div class="aside_home">
-            <br />
-            <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\logoJoker.png" alt="logo_shop" title="Logo Joker" />
-            <br />
-            <a href="https://www.jokercomics.es/">https://www.jokercomics.es/</a><br />
-            <br />
-            <img id="book1" src="C:\Users\Jon\Pictures\Cuadros\D&D\image_asidehome1.jpg" alt="publi1" title="libro1" />
-            <br />
-            <img id="book2" src="C:\Users\Jon\Pictures\Cuadros\D&D\image_asidehome2.jpg" alt="publi2" title="libro2" />
-            <br />
-            <img id="book3" src="C:\Users\Jon\Pictures\Cuadros\D&D\image_asidehome3.jpg" alt="publi3" title="libro3" />
-            <br />
+        </header>
+
+        <div class="row">
+            <div class="col-md-04">
+                <div class="aside_home">
+                    <br />
+                    <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\logoJoker.png" alt="logo_shop" title="Logo Joker" />
+                    <br />
+                    <a href="https://www.jokercomics.es/">https://www.jokercomics.es/</a><br />
+                    <br />
+                    <img id="book1" src="C:\Users\Jon\Pictures\Cuadros\D&D\image_asidehome1.jpg" alt="publi1" title="libro1" />
+                    <br />
+                    <img id="book2" src="C:\Users\Jon\Pictures\Cuadros\D&D\image_asidehome2.jpg" alt="publi2" title="libro2" />
+                    <br />
+                    <img id="book3" src="C:\Users\Jon\Pictures\Cuadros\D&D\image_asidehome3.jpg" alt="publi3" title="libro3" />
+                    <br />
+                </div>
+            </div>
+            <div class="col-md-08 col-md-offset-08">
+                <div class="main">
+                    <h1>ÚLTIMAS NOTICIAS</h1>
+                    <div class="row" id="article_home1">
+                        <div class="col-md-04">
+                            <img id="image_home1" src="C:\Users\Jon\Pictures\Cuadros\D&D\reinos olvidados.jpg" alt="image book" title="Tomo Reinos Olvidados" />
+                        </div>
+                        <div class="col-md-08">
+                            <h2 id="title_home1">Dungeons & Dragons: Reinos Olvidados</h2>
+                            <p id="par_home1">Randral y Torn “Ojo de acero” son unos especialistas del trapicheo malviviendo en la ciudad de Aguas Profundas y esta noche parece que la fortuna les acompaña. ¿O será más bien la mala suerte? Cuando se crucen con una banda raptando a la noble Talandra Cuerno Rugiente , dará comienzo una trepidante persecución en la que malhechores y criaturas de toda calaña participarán para obtener un buen botín.</p>
+                            <a id="en_home1" href="">Read More >></a>
+                        </div>
+                    </div>
+                    <div class="row" id="article_home2">
+                        <div class="col-md-04">
+                            <img id="image_home2" src="C:\Users\Jon\Pictures\Cuadros\D&D\plaga de hielo.jpg" alt="image book2" title="Tomo Plaga de Hielo" />
+                        </div>
+                        <div class="col-md-08">
+                            <h2 id="title_home2">Dungeons & Dragons: Plaga de hielo</h2>
+                            <p id="par_home2">El frío y el hielo invaden el reino en pleno verano.Los monstruos árticos merodean por la tierra congelada y un pequeño grupo de héroes deberá llegar a las profundidades de una ciudad en ruinas.</p>
+                            <a id="en_home2" href="">Read More >></a>
+                        </div>
+                    </div>
+                    <div class="row" id="article_home3">
+                        <div class="col-md-04">
+                            <img id="image_home3" src="C:\Users\Jon\Pictures\Cuadros\D&D\ojo sangriento.jpg" alt="image book3" title="Tomo El Ojo Sangriento" />
+                        </div>
+                        <div class="col-md-08">
+                            <h2 id="title_home3">Dungeons & Dragons: El Ojo sangriento</h2>
+                            <p id="par_home3">En las profundidades de la tierra, un siniestro ritual tiene lugar. Un clérigo renegado busca el ojo de Gruumsh, una reliquia sagrada del horrendo dios de los orcos..</p>
+                            <a id="en_home3" href="">Read More >></a>
+                        </div>
+                    </div>
+                    <div class="row" id="article_home4">
+                        <div class="col-md-04">
+                            <img id="image_home4" src="C:\Users\Jon\Pictures\Cuadros\D&D\paladin.jpg" alt="image cards" title="Paquete de Cartas del Paladin" />
+                        </div>
+                        <div class="col-md-08">
+                            <h2 id="title_home4">Dungeons & Dragons: Paladin, cartas</h2>
+                            <p id="par_home4">Este mazo de cartas de conjuro es un valioso recurso para cualquier lanzador de conjuros. Puedes consultar el mazo para escoger los conjuros a aprender, y tras un largo descanso puedes apartar los hechizos que quieres preparar para ese día. Las cartas están fabricadas para que sean muy resistentes y que duren, están cubiertas por una capa protectora plástica para protegerlas y que se puedan usar marcadores de borrado en seco sin problemas. El nombre del conjuro y la información importante se muestran visiblemente para una referencia rápida. El texto descriptivo y mecánicas de juego aparecen al completo siempre que es posible, cuando no ha sido posible, se indica la página del libro para consultar. Los hechizos con mejoras tienen un apartado añadido que explica dicha mejora. El reverso de las cartas indica visiblemente el nivel del conjuro para facilitar la consulta. Contiene 70 cartas con todos los conjuros de paladín y juramento hasta nivel 5. </p>
+                            <a id="en_home4" href="">Read More >></a>
+                        </div>
+                    </div>
+                    <div class="row" id="article_home5">
+                        <div class="col-md-04">
+                            <img id="image_home5" src="C:\Users\Jon\Pictures\Cuadros\D&D\explorador.jpg" alt="image cards2" title="Paquete de Cartas del Explorador" />
+                        </div>
+                        <div class="col-md-08">
+                            <h2 id="title_home5">Dungeons & Dragons: Explorador, cartas</h2>
+                            <p id="par_home5">Este mazo de cartas de conjuro es un valioso recurso para cualquier lanzador de conjuros. Puedes consultar el mazo para escoger los conjuros a aprender, y tras un largo descanso puedes apartar los hechizos que quieres preparar para ese día. Las cartas están fabricadas para que sean muy resistentes y que duren, están cubiertas por una capa protectora plástica para protegerlas y que se puedan usar marcadores de borrado en seco sin problemas. El nombre del conjuro y la información importante se muestran visiblemente para una referencia rápida. El texto descriptivo y mecánicas de juego aparece al completo siempre que es posible, cuando no ha sido posible, se indica la página del libro para consultar. Los hechizos con mejoras tienen un apartado añadido que explica dicha mejora. El reverso de las cartas indica visiblemente el nivel del conjuro para facilitar la consulta. Contiene 46 cartas con todos los conjuros de explorador hasta nivel 5. </p>
+                            <a id="en_home5" href="">Read More >></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="main">
-            <h1>ÚLTIMAS NOTICIAS</h1>
-            <div class="article_home1">
-                <img id="image_home1" src="C:\Users\Jon\Pictures\Cuadros\D&D\reinos olvidados.jpg" alt="image book" title="Tomo Reinos Olvidados" />
-                <h2 id="title_home1">Dungeons & Dragons: Reinos Olvidados</h2>
-                <p id="par_home1">Randral y Torn “Ojo de acero” son unos especialistas del trapicheo malviviendo en la ciudad de Aguas Profundas y esta noche parece que la fortuna les acompaña. ¿O será más bien la mala suerte? Cuando se crucen con una banda raptando a la noble Talandra Cuerno Rugiente , dará comienzo una trepidante persecución en la que malhechores y criaturas de toda calaña participarán para obtener un buen botín.</p>
-                <a id="en_home1" href="">Read More >></a>
-            </div>
-            <div class="article_home2">
-                <img id="image_home2" src="C:\Users\Jon\Pictures\Cuadros\D&D\plaga de hielo.jpg" alt="image book2" title="Tomo Plaga de Hielo" />
-                <h2 id="title_home2">Dungeons & Dragons: Plaga de hielo</h2>
-                <p id="par_home2">El frío y el hielo invaden el reino en pleno verano.Los monstruos árticos merodean por la tierra congelada y un pequeño grupo de héroes deberá llegar a las profundidades de una ciudad en ruinas.</p>
-                <a id="en_home2" href="">Read More >></a>
-            </div>
-            <div class="article_home3">
-                <img id="image_home3" src="C:\Users\Jon\Pictures\Cuadros\D&D\ojo sangriento.jpg" alt="image book3" title="Tomo El Ojo Sangriento" />
-                <h2 id="title_home3">Dungeons & Dragons: El Ojo sangriento</h2>
-                <p id="par_home3">En las profundidades de la tierra, un siniestro ritual tiene lugar. Un clérigo renegado busca el ojo de Gruumsh, una reliquia sagrada del horrendo dios de los orcos..</p>
-                <a id="en_home3" href="">Read More >></a>
-            </div>
-            <div class="article_home4">
-                <img id="image_home4" src="C:\Users\Jon\Pictures\Cuadros\D&D\paladin.jpg" alt="image cards" title="Paquete de Cartas del Paladin" />
-                <h2 id="title_home4">Dungeons & Dragons: Paladin, cartas</h2>
-                <p id="par_home4">Este mazo de cartas de conjuro es un valioso recurso para cualquier lanzador de conjuros. Puedes consultar el mazo para escoger los conjuros a aprender, y tras un largo descanso puedes apartar los hechizos que quieres preparar para ese día. Las cartas están fabricadas para que sean muy resistentes y que duren, están cubiertas por una capa protectora plástica para protegerlas y que se puedan usar marcadores de borrado en seco sin problemas. El nombre del conjuro y la información importante se muestran visiblemente para una referencia rápida. El texto descriptivo y mecánicas de juego aparecen al completo siempre que es posible, cuando no ha sido posible, se indica la página del libro para consultar. Los hechizos con mejoras tienen un apartado añadido que explica dicha mejora. El reverso de las cartas indica visiblemente el nivel del conjuro para facilitar la consulta. Contiene 70 cartas con todos los conjuros de paladín y juramento hasta nivel 5. </p>
-                <a id="en_home4" href="">Read More >></a>
-            </div>
-            <div class="article_home5">
-                <img id="image_home5" src="C:\Users\Jon\Pictures\Cuadros\D&D\explorador.jpg" alt="image cards2" title="Paquete de Cartas del Explorador" />
-                <h2 id="title_home5">Dungeons & Dragons: Explorador, cartas</h2>
-                <p id="par_home5">Este mazo de cartas de conjuro es un valioso recurso para cualquier lanzador de conjuros. Puedes consultar el mazo para escoger los conjuros a aprender, y tras un largo descanso puedes apartar los hechizos que quieres preparar para ese día. Las cartas están fabricadas para que sean muy resistentes y que duren, están cubiertas por una capa protectora plástica para protegerlas y que se puedan usar marcadores de borrado en seco sin problemas. El nombre del conjuro y la información importante se muestran visiblemente para una referencia rápida. El texto descriptivo y mecánicas de juego aparece al completo siempre que es posible, cuando no ha sido posible, se indica la página del libro para consultar. Los hechizos con mejoras tienen un apartado añadido que explica dicha mejora. El reverso de las cartas indica visiblemente el nivel del conjuro para facilitar la consulta. Contiene 46 cartas con todos los conjuros de explorador hasta nivel 5. </p>
-                <a id="en_home5" href="">Read More >></a>
-            </div>
-        </div>
     </div>
-    <div style="clear:both;">
-        <div class="footer_home">
+    <footer class="container" id="footer_home">
+        <div class="jumbotron">
             <img id="dyd_home2" src="C:\Users\Jon\Pictures\Cuadros\D&D\footer_home.jpg" alt="dyd_pjs_battle" title="PJs battle with dragon" />
         </div>
-    </div>
-        <script src="app.js"></script>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
