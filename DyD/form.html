@@ -17,79 +17,53 @@
     </div>
 
     <header class="jumbotron" id="header_form">
-        <img id="image_form1" src="C:\Users\Jon\Pictures\Cuadros\D&D\header_form.jpg" alt="" title="header-image" />
+        <img id="image_form1" src="C:\Users\Jon\Pictures\Cuadros\D&D\header_form.jpg" class="img-responsive" alt="" title="header-image" />
     </header>
     <div class="container" id="navbar_form">
         <nav class="row">
             <ul class="nav nav-pill col-md-08 col-md-08-offset">
-                <li><a href="homepage.html">HOME</a></li>
-                <li><a href="http://dnd.wizards.com/">CATALOG</a></li>
-                <li><a href="http://dnd.wizards.com/products/catalog">SHOP</a></li>
-                <li>SEARCH</li>
-                <li><a href="contact.html">CONTACT US</a></li>
+                <li class="nav-item"><a class="nav-link" href="homepage.html">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://dnd.wizards.com/">CATALOG</a></li>
+                <li class="nav-item"><a class="nav-link" href="http://dnd.wizards.com/products/catalog">SHOP</a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#">SEARCH</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
             </ul>
-        </nav> 
+        </nav>
     </div>
-     <div class="container" id="article_form">
-         <nav class="row">
-             <div class="col-md-03" id="asideleft_form">
-                 <br />
-                 <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\logoJoker.png" alt="logo_shop" title="Logo Joker" />
-                 <br />
-                 <a href="https://www.jokercomics.es/">https://www.jokercomics.es/</a><br />
-                 <br />
-             </div>
-             <div class="col-md-06 col-md-06-offset" id="main_form">
-                 <p id="par_form1">Bienvenido a la base de datos de Dungeons & Dragons.</p>
-                 <br />
-                 <select id="" onchange="selectPart()">
-                     <option value="classes">Clases</option>
-                     <option value="races">Razas</option>
-                     <option value="equipment">Equipamiento</option>
-                     <option value="monsters">Bestiario</option>
-                     <option value="skills">Habilidades</option>
-                 </select>
-
-             </div>
-             <div class="col-md-03 col-md-03-offset" id="asideright_form">
-
-             </div>
-         </nav>
-     </div>
-        <div class="header_form_par" style="clear:both;">
-            
-        </div>
-        <div class="">
-            <div class="asideleft_form">
-                
+    <div class="container" id="article_form">
+        <nav class="row">
+            <div class="col-md-03" id="asideleft_form">
+                <br />
+                <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\logoJoker.png" class="img-responsive" alt="logo_shop" title="Logo Joker" />
+                <br />
+                <a href="https://www.jokercomics.es/">https://www.jokercomics.es/</a><br />
+                <br />
             </div>
+            <div class="col-md-06 col-md-06-offset" id="main_form">
+                <p id="par_form1">Bienvenido a la base de datos de Dungeons & Dragons.</p>
+                <br />
+                <select id="first_menu" onchange="selectPart()">
+                    <option value="classes">Clases</option>
+                    <option value="races">Razas</option>
+                    <option value="equipment">Equipamiento</option>
+                    <option value="monsters">Bestiario</option>
+                    <option value="skills">Habilidades</option>
+                </select>
 
-            <div class="form">
-                <form id="search">
-                    
 
-                </form>
-            </div>
-
-            <div class="lista_reclutas">
-                <ul id="destino">
-                    <li></li>
-                </ul>
-                <img id="your destin" />
-            </div>
-
-            <div class="asideright_form">
 
             </div>
+            <div class="col-md-03 col-md-03-offset" id="asideright_form">
+                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asiderightsearch.jpg" class="img-responsive" alt="minature" title="Miniatura" />
+                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asidesrightsearch2.jpg" class="img-responsive" alt="minature" title="Miniatura" />
+                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asiderightsearch3.jpg" class="img-responsive" alt="minature" title="Miniatura" />
+            </div>
+        </nav>
+    </div>
+    <footer class="jumbotron" id="footer_form">
+        <img id="image_form1" src="C:\Users\Jon\Pictures\Cuadros\D&D\D&D Transparent.png" class="img-responsive" alt="" title="footer-image" />
+    </footer>
 
-        </div>
-
-
-        <div class="footer_form">
-
-        </div>
-
-
-        <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ body {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 0px;
-    background-color: rgba(205, 239, 85,0.3);
+    background-color: rgba(205, 239, 85,0.7);
 }
 
 .row {
@@ -63,6 +63,15 @@ body {
         width: 20%;
         margin: auto;
         float: left;
+    }
+    .nav a:visited {
+        color: rgb(232, 21, 14);
+    }
+    .nav a:hover {
+        color: rgb(195, 194, 116);
+    }
+    .nav a:active {
+        color: rgb(20, 31, 233);
     }
 
 
@@ -136,7 +145,7 @@ body {
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color: azure;
+    color: rgb(53, 18, 120);
     text-align: justify;
 }
 #en_home1 {
@@ -270,7 +279,7 @@ body {
     margin-bottom: 5px;
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: rgb(53, 18, 120);
     color: azure;
 }
 #par_home4 {
@@ -283,7 +292,7 @@ body {
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color: azure;
+    color: rgb(53, 18, 120);
     text-align: justify;
 }
 #en_home4 {
@@ -320,8 +329,8 @@ body {
     margin-bottom: 5px;
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: azure;
+    font-size:20px;
+    color: rgb(53, 18, 120);
 }
 #par_home5 {
     width: 75%;
@@ -333,7 +342,7 @@ body {
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color: azure;
+    color: rgb(53, 18, 120);
     text-align: justify;
 }
 #en_home5 {
@@ -413,10 +422,10 @@ body {
     margin-bottom: 10px;
     text-align: center;
 }
-/*.asideleft_form img {
-    width: 200px;
-    display: block;
-    margin: 0 auto;
+#footer_form img{
+    width:1200px;
+    display:block;
+    margin:0 auto;
 }
 
 
@@ -441,7 +450,7 @@ body {
     text-decoration: none;
     width: 60%;
     overflow: hidden;
-    background-color:rgb(53, 18, 120);
+    background-color: rgb(71, 141, 89);
     border-radius: 20px;
     float: right;
     padding-top: 2px;
@@ -488,7 +497,7 @@ body {
     margin: 0 auto;
     align-items: center;
     display: table-row;
-    background-color: rgba(205, 239, 85,0.3);
+    background-color: rgba(205, 239, 85,0.7);
     float: left;
 }
 
@@ -511,7 +520,7 @@ body {
     margin-bottom: 20px;
     border-right-style: dotted;
     border-right-width: 15px;
-    border-right-color: rgb(53, 18, 120);
+    border-right-color: rgb(221, 207, 207);
 }
 
 #image_cont2 {
