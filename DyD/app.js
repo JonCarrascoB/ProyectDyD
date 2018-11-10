@@ -8,13 +8,18 @@ $('.target').change(function () {
                 url: "http://www.dnd5eapi.co/api/skills",
                 dataType: "text",
                 success: function (result) {
-                    let skills = JSON.parse(result);
-                    for (let i = 0; i < skills.length; i++) {
-                        $('#answer1').append("<option value='skill[i].name'>skill[i].name</option>");
-                    }
+                    let skillObject = JSON.parse(result);
+                    let listOfSkill = skillObject.results;
+                    let skillUrls = [];
+
+                    listOfSkill.forEach(function (skill) {
+                        skillUrls.push(skill);
+                    });
+                    ShowSkills(skillUrls);
                 }
             });
     }
+
     else if (option === 'classes') {
         $.get(
             {
@@ -31,7 +36,14 @@ $('.target').change(function () {
                 url: "http://www.dnd5eapi.co/api/equipment",
                 dataType: "text",
                 success: function (result) {
-                    console.log(JSON.parse(result));
+                    let equipmentObject = JSON.parse(result);
+                    let listOfEquipment = equipmentObject.results;
+                    let equipmentUrls = [];
+                    
+                    listOfEquipment.forEach(function (equipment) {
+                        equipmentUrls.push(equipment);
+                    });
+                    ShowItemOfEquipment(equipmentUrls);
                 }
             });
     }
@@ -57,9 +69,22 @@ $('.target').change(function () {
     }
 });
 
-
-
-
+function ShowSkills(skillUrls) {
+    for (let j = 0; j < skillUrls.length; j++) {
+        $('#answer1').append($("<option</option>")
+            .val(skillUrls[j].name)
+            .html(skillUrls[j].name)
+        );
+    }
+}
+function ShowItemOfEquipment(equipmentUrls) {
+    for (let i = 0; i < equipmentUrls.length; i++) {
+        $('#answer1').append("<p>" +equipmentUrls[i].name+ "</p>");
+    }
+}   
+    
+    
+    
 //function selectPart() {
 //    let xhr = new XMLHttpRequest();
 //    let url = "http://dnd5eapi.co/api/" + option;
