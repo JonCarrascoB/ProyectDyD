@@ -10,30 +10,16 @@ $('.target').change(function () {
                 success: function (result) {
                     let skillObject = JSON.parse(result);
                     let listOfSkill = skillObject.results;
+                    let listTypeSkill;
                     let skillUrls = [];
 
                     listOfSkill.forEach(function (skill) {
-                        skillUrls.push(skill);
+                        listTypeSkill = skill.results;
+                        listTypeSkill.forEach(function (typeSkill) {
+                            skillUrls.push(typeSkill);
+                        });
                     });
                     ShowSkills(skillUrls);
-
-                    $('.targetSkill').change(function () {
-                        let option2 = $('.targetSkill').index();
-                        $.get(
-                            {
-                                url: "http://www.dnd5eapi.co/api/skills/" + option2,
-                                dataType: "text",
-                                succes: function (secondResult) {
-                                    let skillObject2 = JSON.parse(secondResult);
-                                    let listOfSkill2 = skillObject2.index;
-                                    let skillUrls2 = [];
-                                    listOfSkill2.forEach(function (skill2) {
-                                        skillUrls2.push(skill2);
-                                    });
-                                    showSkillDates();
-                                }
-                            });
-                    });
                 }
             });
     }
@@ -51,15 +37,12 @@ $('.target').change(function () {
                     listOfClasses.forEach(function (char) {
                         classesUrls.push(char);
                     });
-        ShowClasses(classesUrls);
+                    ShowClasses(classesUrls);
+                }
+            });
     }
-});
-    }
-
-
-  
-else if (option === 'equipment') {
-    $.get(
+    else if (option === 'equipment') {
+        $.get(
         {
             url: "http://www.dnd5eapi.co/api/equipment",
             dataType: "text",
@@ -74,9 +57,9 @@ else if (option === 'equipment') {
                 ShowItemOfEquipment(equipmentUrls);
             }
         });
-}
-else if (option === 'races') {
-    $.get(
+    }
+    else if (option === 'races') {
+        $.get(
         {
             url: "http://www.dnd5eapi.co/api/races",
             dataType: "text",
@@ -91,9 +74,9 @@ else if (option === 'races') {
                 ShowRaces(racesUrls);
             }
         });
-}
-else if (option === 'monsters') {
-    $.get(
+    }
+    else if (option === 'monsters') {
+        $.get(
         {
             url: "http://www.dnd5eapi.co/api/monsters",
             dataType: "text",
@@ -108,28 +91,36 @@ else if (option === 'monsters') {
                 ShowMonsters(monstersUrls);
             }
         });
-}
+    }
 });
+
+$('.targetClasses').change(function () {
+    let optionClasses = $('.targetClasses').val();
+    if (optionClasses === 'Barbarian') {
+        $.get(
+            {
+                url: "http://www.dnd5eapi.co/api/classes/1",
+                dataType: "text",
+                success: function (result) {
+                    let skillObject = JSON.parse(result);
+                    ShowEachClass(skillObject);
+                }
+            });
+    }
+
+
+
+});
+
+
 
 function ShowSkills(skillUrls) {
     for (let j = 0; j < skillUrls.length; j++) {
-        $('#answerSkills1').show("slow");
-        $('#answerSkills1').append($("<option></option>")
-            .val(skillUrls[j].name)
-            .html(skillUrls[j].name)
-        );
+        $('#answerSkills').append($("<h2></h2>").val(skillUrls[j].name));
+        $('#answerSkills').append($("<p></p>").val(skillUrls[j].desc));
     }
 }
-function ShowSkillDates(skillUrls2) {
-    for (let k = 0; k < skillUrls2.length; k++) {
-        $('#answerSkills2').append($("<h2></h2>")
-            .html(skillUrls2[k].name)
-        );
-        $('answerSkill2').append($("<p></p>")
-            .html(skillUrls2[k].desc)
-        );
-    }
-}
+
 
 function ShowRaces(racesUrls) {
     for (let j = 0; j < racesUrls.length; j++) {
@@ -161,6 +152,13 @@ function ShowMonsters(monstersUrls) {
     for (let i = 0; i < monstersUrls.length; i++) {
         $('#answerMonster').append("<li>" + monstersUrls[i].name + "</li>");
     }
+}
+
+function ShowEachClass(skillObject) {
+    let result = "";
+    result += "<h2>" + skillObject.name + "</h2>";
+    result += "<p>" + "Puntos de golpe: " + skillObject.hit_die + "</h2>";
+    document.getElementById("answerClasses2").innerHTML = result;
 }
 
 

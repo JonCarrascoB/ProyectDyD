@@ -64,13 +64,13 @@ body {
         margin: auto;
         float: left;
     }
-    .nav a:visited {
+    a:visited {
         color: rgb(232, 21, 14);
     }
-    .nav a:hover {
-        color: rgb(195, 194, 116);
+    a:hover {
+        color: rgb(25, 128, 121);
     }
-    .nav a:active {
+    a:active {
         color: rgb(20, 31, 233);
     }
 
@@ -442,47 +442,12 @@ body {
     display: block;
 }
 
-#menu_contact {
-    list-style-type: none;
-    align-content: center;
-    display: block;
-    color: white;
-    text-decoration: none;
-    width: 60%;
-    overflow: hidden;
-    background-color: rgb(71, 141, 89);
-    border-radius: 20px;
-    float: right;
-    padding-top: 2px;
-    padding-bottom: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-#menu_contact ul{
-    padding-top:0px;
-    padding-bottom:2px;
-    padding-left:0px;
-    padding-right: 30px;
-}
-    #menu_contact li {
-        display: block;
-        width: 20%;
-        margin: auto;
-        float: left;
-        align-content:center;
-        text-align: center;
-        font-family: Arial;
-        font-size: 20px;
-        color: white;
-        text-decoration: none;
-        overflow: hidden;
-        list-style-type: none;
-    }
+
 
 .nav_contact {
     width: 100%;
     display: block;
-    margin-top: 20px;
+    margin-top: 0px;
     background-color: rgba(205, 239, 85,0.3);
 }
     .nav_contact img {
