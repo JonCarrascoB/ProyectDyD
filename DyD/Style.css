@@ -576,20 +576,7 @@ body {
 
 /*Para adaptar la pagina a reducciones de la ventana*/
 @media only screen and (max-width:600px) {
-    body
+    body,
+    container,
 
-    .nav2 {
-        width: 100%;
-        float: none;
-    }
-
-    .nav3 {
-        width: 100%;
-        float: none;
-    }
-
-    .nav4 {
-        width: 100%;
-        float: none;
-    }
 }

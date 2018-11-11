@@ -616,13 +616,13 @@ function ShowClasses(classesUrls) {
 
 function ShowItemOfEquipment(equipmentUrls) {
     for (let i = 0; i < equipmentUrls.length; i++) {
-        $('#answerEquipment').append("<li>" + equipmentUrls[i].name + "</li>");
+        $('#answerEquipment').append("<li class='col-md-3 col-sm-2'>" + equipmentUrls[i].name + "</li>");
     }
 }
 
 function ShowMonsters(monstersUrls) {
     for (let i = 0; i < monstersUrls.length; i++) {
-        $('#answerMonster').append("<li>" + monstersUrls[i].name + "</li>");
+        $('#answerMonster').append("<li class='col-md-3 col-sm-2'>" + monstersUrls[i].name + "</li>");
     }
 }
 
