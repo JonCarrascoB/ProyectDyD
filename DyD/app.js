@@ -16,6 +16,7 @@ $('.target').change(function () {
                     listOfSkill.forEach(function (skill) {
                         skillUrls.push(skill);
                     });
+                    localStorage.setItem("skill", JSON.stringify(skillUrls));
                     ShowSkills(skillUrls);
                 }
             });
@@ -33,6 +34,7 @@ $('.target').change(function () {
                     listOfClasses.forEach(function (char) {
                         classesUrls.push(char);
                     });
+                    localStorage.setItem("char", JSON.stringify(classesUrls));
                     ShowClasses(classesUrls);
                 }
             });
@@ -50,6 +52,7 @@ $('.target').change(function () {
                     listOfEquipment.forEach(function (equipment) {
                         equipmentUrls.push(equipment);
                     });
+                    localStorage.setItem("equipment", JSON.stringify(equipmentUrls));
                     ShowItemOfEquipment(equipmentUrls);
                 }
             });
@@ -67,6 +70,7 @@ $('.target').change(function () {
                     listOfRaces.forEach(function (race) {
                         racesUrls.push(race);
                     });
+                    localStorage.setItem("race", JSON.stringify(racesUrls));
                     ShowRaces(racesUrls);
                 }
             });
@@ -84,6 +88,7 @@ $('.target').change(function () {
                     listOfMonsters.forEach(function (monster) {
                         monstersUrls.push(monster);
                     });
+                    localStorage.setItem("monster", JSON.stringify(monstersUrls));
                     ShowMonsters(monstersUrls);
                 }
             });
@@ -101,8 +106,10 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill1", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
+
             });
     }
     else if (optionSkills === 'Animal Handling') {
@@ -112,6 +119,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill2", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -123,6 +131,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill3", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -134,6 +143,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill4", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -145,6 +155,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill5", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -156,6 +167,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill6", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -167,6 +179,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill7", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -178,6 +191,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill8", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -189,6 +203,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill9", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -200,6 +215,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill10", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -211,6 +227,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill11", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -222,6 +239,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill12", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -233,6 +251,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill13", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -244,6 +263,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill14", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -255,6 +275,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill15", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -266,6 +287,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill16", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -277,6 +299,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill17", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -288,6 +311,7 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
+                    localStorage.setItem("skill18", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -304,6 +328,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class1", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -315,6 +340,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class2", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -326,6 +352,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class3", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -337,6 +364,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class4", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -348,6 +376,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class5", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -359,6 +388,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class6", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -370,6 +400,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class7", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -381,6 +412,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class8", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -392,6 +424,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class9", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -403,6 +436,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class10", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -414,6 +448,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class11", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -425,6 +460,7 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
+                    localStorage.setItem("class12", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -442,6 +478,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race1", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -453,6 +490,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race2", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -464,6 +502,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race3", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -475,6 +514,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race4", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -486,6 +526,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race5", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -497,6 +538,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race6", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -508,6 +550,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race7", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -519,6 +562,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race8", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -530,6 +574,7 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
+                    localStorage.setItem("race9", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -571,7 +616,7 @@ function ShowClasses(classesUrls) {
 
 function ShowItemOfEquipment(equipmentUrls) {
     for (let i = 0; i < equipmentUrls.length; i++) {
-        $('#answerEquipment').append("<li class='col-md-04 col-sm-01'>" + equipmentUrls[i].name + "</li>");
+        $('#answerEquipment').append("<li>" + equipmentUrls[i].name + "</li>");
     }
 }
 
@@ -611,46 +656,46 @@ function ShowEachRace(raceObject) {
 
 
 //Las bases de Datos en el navegador:
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+//window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
-if (!window.indexedDB) {
-    alert();
-}
+//if (!window.indexedDB) {
+//    alert();
+//}
 
-let request = window.indexedDB.open("DyDDatabase", 1),
-    db,
-    tx,
-    store,
-    index;
+//let request = window.indexedDB.open("DyDDatabase", 1),
+//    db,
+//    tx,
+//    store,
+//    index;
 
-request.onupgradeneeded = function (e) {
-    console.log("upgrading");
-    let db = request.result,
-        store = db.createObjectStore("QuestionsStore", {
-            keyPath: "qID"
-        }),
-        index = store.createIndex("questionText", "questionText", { unique: false }); // primero es indice que queremos usar, segundo es clave del elemento anadido, tercero es si es unico o no
-};
+//request.onupgradeneeded = function (e) {
+//    console.log("upgrading");
+//    let db = request.result,
+//        store = db.createObjectStore("QuestionsStore", {
+//            keyPath: "qID"
+//        }),
+//        index = store.createIndex("questionText", "questionText", { unique: false }); // primero es indice que queremos usar, segundo es clave del elemento anadido, tercero es si es unico o no
+//};
 
-request.onerror = function (e) {
-    console.log("There was an error: " + e.target.errorCode);
-};
+//request.onerror = function (e) {
+//    console.log("There was an error: " + e.target.errorCode);
+//};
 
-request.onsuccess = function (e) {
-    db = request.result;
-    tx = db.transaction("QuestionsStore", "readwrite");
-    store = tx.objectStore("QuestionsStore");
-    index = store.index("questionText");
-    db.onerror = function (e) {
-        console.log("ERROR" + e.target.errorCode);
-    };
-};
+//request.onsuccess = function (e) {
+//    db = request.result;
+//    tx = db.transaction("QuestionsStore", "readwrite");
+//    store = tx.objectStore("QuestionsStore");
+//    index = store.index("questionText");
+//    db.onerror = function (e) {
+//        console.log("ERROR" + e.target.errorCode);
+//    };
+//};
 
-    //para meter valores a la BD
-    store.put({
-        qID: 1, questionText: "The sky is blue.",
-        correctAnswer: true, studentAnswer: true, result: true
-    });
+//    //para meter valores a la BD
+//    store.put({
+//        qID: 1, questionText: "The sky is blue.",
+//        correctAnswer: true, studentAnswer: true, result: true
+//    });
 
 
 

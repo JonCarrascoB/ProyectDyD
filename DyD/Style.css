@@ -402,16 +402,41 @@ body {
     border-right-width: 15px;
     border-right-color: rgb(221, 207, 207);
 }
+    #main_form h2 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+        color: rgb(135, 67, 16);
+        margin-left: 20px;
+        margin-right: 10px;
+        text-align: justify;
+    }
+    #main_form li {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        color: rgb(53, 18, 120);
+        overflow: hidden;
+        display: block;
+        margin-left: 20px;
+        margin-right: 10px;
+        
+
+    }
 #main_form p{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:30px;
+    font-size:20px;
     color:rgb(53, 18, 120);
+    margin-top:5px;
     margin-left:20px;
+    margin-right:10px;
+    margin-bottom:10px;
     text-align:justify;
+
 }
-#main_form select{
-    align-content:center;
-}
+    #main_form select {
+        align-content: center;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
 #asideright_form {
     width: 15%;
     display: table-cell;
