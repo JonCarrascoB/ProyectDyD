@@ -526,7 +526,16 @@ form {
     margin:0 auto;
     display:block;
 }
-
+#genreR {
+    font-family: 'Comic Sans MS';
+    color: rgb(16, 114, 114);
+    font-size: 10px;
+}
+#ListC {
+    font-family: 'Comic Sans MS';
+    color: rgb(16, 114, 114);
+    font-size: 10px;
+}
 label{
     font-family:'Comic Sans MS';
     color:rgb(46, 81, 195);
@@ -541,6 +550,7 @@ aside {
     margin-right: 15px;
     margin-bottom: 10px;
     align-content:center;
+    text-align:center;
 }
 aside img{
     width:200px;
@@ -566,8 +576,6 @@ footer img{
     background-color: rgba(205, 239, 85,0.3);
     display: block;
 }
-
-
 
 .nav_contact {
     width: 100%;
@@ -698,17 +706,25 @@ footer img{
     .aside_home{
         width:100%;
     }
-    #asideleft_form{
+    #asideleft_search{
         width:100%;
     }
-    #main_form{
+    #main_search{
         width:100%;
     }
-    #asideright_form{
-        width:50%;
-        
+    #asideright_search{
+        width:100%;
     }
     .aside_contact{
+        width:100%;
+    }
+    nav{
+        width:100%;
+    }
+    form{
+        width:100%;
+    }
+    aside{
         width:100%;
     }
 }
