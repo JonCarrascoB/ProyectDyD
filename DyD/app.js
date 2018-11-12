@@ -25,7 +25,7 @@ $('#clickLogin').click(function () {
                 logIn(name);
             }
             else {
-                document.getElementById("answerWrongLogin").innerHTML = "La contraseña no tiene ningun caracter";
+                document.getElementById("answerWrongLogin").innerHTML = "La contraseña no tiene ninguna letra mayuscula";
             }
         }
         else {
