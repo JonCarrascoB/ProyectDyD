@@ -391,7 +391,7 @@ body {
 }
 
 
-/*Aquí maquetamos la form*/
+/*Aquí maquetamos search*/
 #header_search img {
     width: 1200px;
     display: block;
@@ -526,16 +526,7 @@ form {
     margin:0 auto;
     display:block;
 }
-#genreR {
-    font-family: 'Comic Sans MS';
-    color: rgb(16, 114, 114);
-    font-size: 15px;
-}
-#ListC {
-    font-family: 'Comic Sans MS';
-    color: rgb(16, 114, 114);
-    font-size: 15px;
-}
+
 label{
     font-family:'Comic Sans MS';
     color:rgb(46, 81, 195);
