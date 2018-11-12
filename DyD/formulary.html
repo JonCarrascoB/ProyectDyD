@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sing Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+</head>
+<body>
+    <nav class="col-md-12 col-sm-06" id="main_formulary">
+        <form class="col-md-08 col-sm-02">
+            <h2>Rellene los campos siguientes (son obligatorios los que tengan *): </h2>
+            <div class="form-group">
+                <label for="usser">Introduzca el nombre de su usuario (*): </label>
+                <input type="text" class="form.control" id="usser" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Introduzca su clave, se requiere de más de 8 caracteres (*): </label>
+                <input type="text" class="form.control" id="password" required />
+            </div>
+            <div class="form-group">
+                <label for="repPass">Repita su Clave (*): </label>
+                <input type="text" class="form.control" id="newUsser" required />
+            </div>
+            <div class="form-group">
+                <label for="address">Introduzca su dirección: </label>
+                <input type="text" class="form.control" id="address" />
+                <label for="ity">Población: </label>
+                <input type="text" class="form.control" id="city" />
+                <label for="country">País: </label>
+                <input type="text" class="form.control" id="country" />
+            </div>
+            <div class="form-group">
+                <label for="email">Introduzca su correo electronico: </label>
+                <input type="text" class="form.control" id="email" />
+                <label for="tlno">Introduzca su teléfono: </label>
+                <input type="text" class="form.control" id="tlno" />
+            </div>
+            <div class="form-group">
+                <label>Elija su genero</label><br />
+                <input type="radio" name="genre" value="Male" /> Varón
+                <input type="radio" name="genre" value="Female" /> Mujer
+                <input type="radio" name="genre" value="Other" /> Otros
+            </div>
+            <div class="form-group">
+                <label>Elija lo que le gusta de Dungeons & Dragons: </label><br />
+                <input type="checkbox" name="like" value="books" />Libros y Novelas <img src="C:\Users\Jon\Pictures\Cuadros\D&D\book_checkbox.jpg" class="img-responsive" alt="check1" title="Books and Novels" />
+                <input type="checkbox" name="like" value="manuals" />Manuales de Juego <img src="C:\Users\Jon\Pictures\Cuadros\D&D\manual_checkbox.jpg" class="img-responsive" alt="check2" title="Manuals" />
+                <input type="checkbox" name="like" value="miniatures" />Miniaturas <img src="C:\Users\Jon\Pictures\Cuadros\D&D\miniature_checkbox.jpg" class="img-responsive" alt="check3" title="Miniatures" />
+                <input type="checkbox" name="like" value="games" />Juegos de Rol <img src="C:\Users\Jon\Pictures\Cuadros\D&D\games_checkbox.jpg" class="img-responsive" alt="check4" title="Games" />
+                <input type="checkbox" name="like" value="PC Games" />Juegos de PC, Playstation, Xbox,... <img src="C:\Users\Jon\Pictures\Cuadros\D&D\pcgames_checkbox.jpg" class="img-responsive" alt="check5" title="PC Games, Playstation, Xbox,..." />
+            </div>
+            <div class="form-group">
+                <input type="submit" id="clickLogin" />
+                <a href="homepage.html">HOME</a>
+            </div>
+            
+        </form>
+        <aside class="col-md-04 col-sm-01 col-md-offset-04" id="aside_formulary">
+            <br />
+            <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\logoJoker.png" class="img-responsive" alt="logo_shop" title="Logo Joker" />
+            <br />
+            <a href="https://www.jokercomics.es/">https://www.jokercomics.es/</a><br />
+            <br />
+            <img src="C:\Users\Jon\Pictures\Cuadros\D&D\aside_formulary1.jpg" class="img-responsive" alt="img_form1" title="Combat" /><br />
+            <img src="C:\Users\Jon\Pictures\Cuadros\D&D\aside_formulary2.jpg" class="img-responsive" alt="img_form2" title="Tabern" /><br />
+            <img src="C:\Users\Jon\Pictures\Cuadros\D&D\aside_formulary3.jpg" class="img-responsive" alt="img_form3" title="Battle" /><br />
+            <img src="C:\Users\Jon\Pictures\Cuadros\D&D\aside_formulary4.jpg" class="img-responsive" alt="img_form4" title="Night" /><br />
+            <img src="C:\Users\Jon\Pictures\Cuadros\D&D\aside_formulary5.jpg" class="img-responsive" alt="img_form5" title="Monster" /><br />
+            <img src="C:\Users\Jon\Pictures\Cuadros\D&D\aside_formulary6.jpg" class="img-responsive" alt="img_form6" title="Dungeon" /><br />
+        </aside>
+    </nav>
+    <footer>
+        <img id="image_formulary" src="C:\Users\Jon\Pictures\Cuadros\D&D\footer_formulary.png" class="img-responsive" alt="dyd_heroes" title="D&D Heroes" />
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js" charset="iso-8859-1"></script>
+</body>
+</html>
