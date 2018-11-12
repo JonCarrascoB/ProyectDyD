@@ -11,6 +11,37 @@ body {
     background-attachment: fixed;
 }
 
+/*Aqui metemos el login*/
+#answerWrongLogin {
+    margin-left: 20px;
+    font-family: 'Comic Sans MS';
+    font-size: 20px;
+    color: rgb(180, 150, 10);
+}
+#answerOkLogin {
+    margin-left: 20px;
+    font-family: 'Comic Sans MS';
+    font-size: 30px;
+    color: rgb(180, 150, 10);
+}
+#getOkLogin {
+    margin-left: 20px;
+    font-family: 'Comic Sans MS';
+    font-size: 30px;
+    color: rgb(8, 50, 95);
+}
+#login {
+    margin-top: 5px;
+    margin-left: 20px;
+    font-family: 'Comic Sans MS';
+    font-size: 15px;
+    color: rgb(180, 150, 10);
+}
+.audio {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
 /*Aquí maquetamos la homepage*/
 .container-fluid{
     
@@ -279,8 +310,8 @@ body {
     margin-bottom: 5px;
     float: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: rgb(53, 18, 120);
-    color: azure;
+    font-size:20px;
+    color: rgb(53, 18, 120);
 }
 #par_home4 {
     width: 75%;
@@ -447,6 +478,7 @@ body {
     margin-bottom: 10px;
     text-align: center;
 }
+
 #footer_form img{
     width:1200px;
     display:block;
@@ -550,10 +582,18 @@ body {
     margin-left: 5px;
     margin-right: 32px;
     margin-bottom: 10px;
-    
     text-align: center;
 }
-
+    .aside_contact h3 {
+        font-family: 'Comic Sans MS';
+        font-size: 20px;
+        color: rgb(95, 38, 168);
+    }
+    .aside_contact p {
+        font-family: 'Comic Sans MS';
+        font-size: 15px;
+        color: rgb(19, 30, 90);
+    }
     .aside_contact img {
         width: 200px;
         display: block;
@@ -577,6 +617,30 @@ body {
 /*Para adaptar la pagina a reducciones de la ventana*/
 @media only screen and (max-width:600px) {
     body,
-    container,
-
+    .nav{
+        width:100%;
+        float:none;
+    }
+    .nav li{
+        float:none;
+    }
+    .main_home{
+        width:100%;
+    }
+    .aside_home{
+        width:100%;
+    }
+    #asideleft_form{
+        width:100%;
+    }
+    #main_form{
+        width:100%;
+    }
+    #asideright_form{
+        width:50%;
+        
+    }
+    .aside_contact{
+        width:100%;
+    }
 }

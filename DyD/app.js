@@ -1,3 +1,49 @@
+// Aqui se va a crear una entrada de usuario y password, que se guardara en local storage y que la pagina
+// no se abrira si no se acepta.
+(function () {
+    let name = localStorage.getItem("nombre");
+    if (name !== null) {
+        logIn(name);
+    }
+}());
+
+function logIn(name) {
+    let answerOkLogin = document.getElementById("answerOkLogin");
+    if (answerOkLogin !== null) {
+        $('#answerLogin').show("slow");
+        answerOkLogin.innerHTML = "Bienvenido a su D&D page, señor: " + name;
+    }
+}
+
+$('#clickLogin').click(function () {
+    let name = $('#usser').val();
+    let pass = $('#password').val();
+    if (name !== null && pass !== null) {
+        if (pass.length >= 8) {
+            if (pass.match(/[A-Z]/)) {
+                localStorage.setItem("nombre", name);
+                logIn(name);
+            }
+            else {
+                document.getElementById("answerWrongLogin").innerHTML = "La contraseña no tiene ningun caracter";
+            }
+        }
+        else {
+            document.getElementById("answerWrongLogin").innerHTML = "La contraseña tiene menos de ocho caracteres";
+        }
+    }
+    else {
+        document.getElementById("answerWrongLogin").innerHTML = "No has insertado una contraseña correcta";
+    }
+
+});
+
+$('#usser_btn').click(function () {
+    let newName = localStorage.getItem("nombre", name);
+    document.getElementById("getOkLogin").innerHTML = "Bienvenido a su D&D page, señor: " + newName;
+});
+
+
 //Aqui creamos la primera busqueda, que para equipament y monster sera la unica, ya que entregaran los datos
 // directamente, pero para classes, races y skills llevara a un segundo dropdown.
 
@@ -16,7 +62,6 @@ $('.target').change(function () {
                     listOfSkill.forEach(function (skill) {
                         skillUrls.push(skill);
                     });
-                    localStorage.setItem("skill", JSON.stringify(skillUrls));
                     ShowSkills(skillUrls);
                 }
             });
@@ -34,7 +79,6 @@ $('.target').change(function () {
                     listOfClasses.forEach(function (char) {
                         classesUrls.push(char);
                     });
-                    localStorage.setItem("char", JSON.stringify(classesUrls));
                     ShowClasses(classesUrls);
                 }
             });
@@ -52,7 +96,6 @@ $('.target').change(function () {
                     listOfEquipment.forEach(function (equipment) {
                         equipmentUrls.push(equipment);
                     });
-                    localStorage.setItem("equipment", JSON.stringify(equipmentUrls));
                     ShowItemOfEquipment(equipmentUrls);
                 }
             });
@@ -70,7 +113,6 @@ $('.target').change(function () {
                     listOfRaces.forEach(function (race) {
                         racesUrls.push(race);
                     });
-                    localStorage.setItem("race", JSON.stringify(racesUrls));
                     ShowRaces(racesUrls);
                 }
             });
@@ -88,7 +130,6 @@ $('.target').change(function () {
                     listOfMonsters.forEach(function (monster) {
                         monstersUrls.push(monster);
                     });
-                    localStorage.setItem("monster", JSON.stringify(monstersUrls));
                     ShowMonsters(monstersUrls);
                 }
             });
@@ -97,8 +138,9 @@ $('.target').change(function () {
 
 //A partir de quí se generan las llamadas para los segundos dropdown de busqueda:
 // SKILLS:
-$('.targetSkills').change(function () {
-    let optionSkills = $('.targetSkills').val();
+
+$('.target2').change(function () {
+    let optionSkills = $('.target2').val();
     if (optionSkills === 'Acrobatics') {
         $.get(
             {
@@ -106,7 +148,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill1", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
 
@@ -119,7 +160,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill2", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -131,7 +171,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill3", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -143,7 +182,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill4", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -155,7 +193,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill5", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -167,7 +204,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill6", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -179,7 +215,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill7", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -191,7 +226,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill8", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -203,7 +237,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill9", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -215,7 +248,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill10", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -227,7 +259,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill11", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -239,7 +270,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill12", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -251,7 +281,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill13", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -263,7 +292,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill14", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -275,7 +303,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill15", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -287,7 +314,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill16", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -299,7 +325,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill17", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -311,7 +336,6 @@ $('.targetSkills').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let skillObject = JSON.parse(result);
-                    localStorage.setItem("skill18", JSON.stringify(skillObject));
                     ShowEachSkill(skillObject);
                 }
             });
@@ -319,8 +343,8 @@ $('.targetSkills').change(function () {
 });
 
 // CLASSES:
-$('.targetClasses').change(function () {
-    let optionClasses = $('.targetClasses').val();
+$('.target2').change(function () {
+    let optionClasses = $('.target2').val();
     if (optionClasses === 'Barbarian') {
         $.get(
             {
@@ -328,7 +352,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class1", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -340,7 +363,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class2", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -352,7 +374,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class3", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -364,7 +385,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class4", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -376,7 +396,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class5", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -388,7 +407,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class6", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -400,7 +418,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class7", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -412,7 +429,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class8", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -424,7 +440,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class9", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -436,7 +451,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class10", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -448,7 +462,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class11", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -460,7 +473,6 @@ $('.targetClasses').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let classObject = JSON.parse(result);
-                    localStorage.setItem("class12", JSON.stringify(classObject));
                     ShowEachClass(classObject);
                 }
             });
@@ -469,8 +481,8 @@ $('.targetClasses').change(function () {
 });
 
 // RACES:
-$('.targetRaces').change(function () {
-    let optionRaces = $('.targetRaces').val();
+$('.target2').change(function () {
+    let optionRaces = $('.target2').val();
     if (optionRaces === 'Dwarf') {
         $.get(
             {
@@ -478,7 +490,6 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race1", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -490,7 +501,6 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race2", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -502,7 +512,6 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race3", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -514,7 +523,6 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race4", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -526,7 +534,6 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race5", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -538,7 +545,6 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race6", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -550,19 +556,17 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race7", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
     }
-    else if (optionRaces === 'Half-orc') {
+    else if (optionRaces === 'Half-Orc') {
         $.get(
             {
                 url: "http://www.dnd5eapi.co/api/races/8",
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race8", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
                 }
             });
@@ -574,8 +578,8 @@ $('.targetRaces').change(function () {
                 dataType: "text",
                 success: function (result) {
                     let raceObject = JSON.parse(result);
-                    localStorage.setItem("race9", JSON.stringify(raceObject));
                     ShowEachRace(raceObject);
+                    Salve();
                 }
             });
     }
@@ -585,9 +589,10 @@ $('.targetRaces').change(function () {
 // Para Mostrar las elecciones del primer dropdown:
 
 function ShowSkills(skillUrls) {
+    $('#answer1').empty();
     for (let i = 0; i < skillUrls.length; i++) {
-        $('#answerSkills1').show("slow");
-        $('#answerSkills1').append($("<option></option>")
+        $('#answer1').show("slow");
+        $('#answer1').append($("<option></option>")
             .val(skillUrls[i].name)
             .html(skillUrls[i].name)
         );
@@ -595,9 +600,10 @@ function ShowSkills(skillUrls) {
 }
 
 function ShowRaces(racesUrls) {
+    $('#answer1').empty();
     for (let j = 0; j < racesUrls.length; j++) {
-        $('#answerRaces1').show("slow");
-        $('#answerRaces1').append($("<option></option>")
+        $('#answer1').show("slow");
+        $('#answer1').append($("<option></option>")
             .val(racesUrls[j].name)
             .html(racesUrls[j].name)
         );
@@ -605,9 +611,10 @@ function ShowRaces(racesUrls) {
 }
 
 function ShowClasses(classesUrls) {
+    $('#answer1').empty();
     for (let k = 0; k < classesUrls.length; k++) {
-        $('#answerClasses1').show("slow");
-        $('#answerClasses1').append($("<option></option>")
+        $('#answer1').show("slow");
+        $('#answer1').append($("<option></option>")
             .val(classesUrls[k].name)
             .html(classesUrls[k].name)
         );
@@ -615,14 +622,18 @@ function ShowClasses(classesUrls) {
 }
 
 function ShowItemOfEquipment(equipmentUrls) {
+    $('#answer1').hide("slow");
+    $('#answer2').empty();
     for (let i = 0; i < equipmentUrls.length; i++) {
-        $('#answerEquipment').append("<li class='col-md-3 col-sm-2'>" + equipmentUrls[i].name + "</li>");
+        $('#answer2').append("<li class='col-md-3 col-sm-2'>" + equipmentUrls[i].name + "</li>");
     }
 }
 
 function ShowMonsters(monstersUrls) {
+    $('#answer1').hide("slow");
+    $('#answer2').empty();
     for (let i = 0; i < monstersUrls.length; i++) {
-        $('#answerMonster').append("<li class='col-md-3 col-sm-2'>" + monstersUrls[i].name + "</li>");
+        $('#answer2').append("<li class='col-md-3 col-sm-2'>" + monstersUrls[i].name + "</li>");
     }
 }
 
@@ -631,14 +642,14 @@ function ShowEachSkill(skillObject) {
     let result = "";
     result += "<h2>" + skillObject.name + "</h2>";
     result += "<p>" + "Description: " + skillObject.desc + "</p>";
-    document.getElementById("answerSkills2").innerHTML = result;
+    document.getElementById("answer2").innerHTML = result;
 }
 
 function ShowEachClass(classObject) {
     let result = "";
     result += "<h2>" + classObject.name + "</h2>";
     result += "<p>" + "Hit point: " + classObject.hit_die + "</p>";
-    document.getElementById("answerClasses2").innerHTML = result;
+    document.getElementById("answer2").innerHTML = result;
 }
 
 function ShowEachRace(raceObject) {
@@ -649,8 +660,10 @@ function ShowEachRace(raceObject) {
     result += "<p>" + "Age: " + raceObject.age + "</p>";
     result += "<p>" + "Size: " + raceObject.size_description + "</p>";
     result += "<p>" + "Languages: " + raceObject.language_desc + "</p>";
-    document.getElementById("answerRaces2").innerHTML = result;
+    document.getElementById("answer2").innerHTML = result;
 }
+
+
 
 
 
@@ -697,41 +710,3 @@ function ShowEachRace(raceObject) {
 //        correctAnswer: true, studentAnswer: true, result: true
 //    });
 
-
-
-//function selectPart() {
-//    let xhr = new XMLHttpRequest();
-//    let url = "http://dnd5eapi.co/api/" + option;
-//    xhr.open("GET", url);
-//    xhr.onreadystatechange = function () {
-//        if (xhr.readyState === 4 && xhr.status === 200) {
-//            let dates = JSON.parse(xhr.response).results;
-//            console.log(dates.name);
-//            //showDates(dates);
-//        }
-//        else if (xhr.readyState === 4 && xhr.status === 400) {
-//            console.log("Error en el servidor");
-//        }
-//    };
-//    xhr.send();
-//}
-
-//function showDates() {
-
-//}
-
-
-
-//function mostrarDatos(cartas) {
-
-//    let nombreCartas = [];
-
-//    for (let i = 0; i < cartas.cards.length; i++) {
-
-//        nombreCartas.push(cartas.cards[i].name);
-
-//    }
-
-//    localStorage.setItem("cartas", JSON.stringify(nombreCartas));
-
-//    // se pueden usar removeItem y clearItem para borrar elementos guardados

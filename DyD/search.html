@@ -8,8 +8,10 @@
     <link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
 <body>
+
+    <!-- Comienza la estructura fisica de la pagina SEARCH -->
     <audio id="dyd" src="C:\Users\Jon\Pictures\Cuadros\D&D\Epic Music - Inmediate Music - Archangel.mp3" preload="auto" autoplay loop></audio>
-    <div>
+    <div class="audio">
         <button onclick="document.getElementById('dyd').play()">Reproducir el Audio</button>
         <button onclick="document.getElementById('dyd').pause()">Pausar el Audio</button>
         <button onclick="document.getElementById('dyd').volume+=0.1">Aumentar el Volumen</button>
@@ -20,6 +22,10 @@
         <img id="image_form1" src="C:\Users\Jon\Pictures\Cuadros\D&D\header_form.jpg" class="img-responsive" alt="" title="header-image" />
     </header>
     <div class="container" id="navbar_form">
+        <div class="okLogin">
+            <input type="button" value="usser" id="usser_btn" />
+            <h2 id="getOkLogin"></h2>
+        </div>
         <nav class="row">
             <ul class="nav nav-pill col-md-8 col-sm-4 col-md-8-offset">
                 <li class="nav-item"><a class="nav-link" href="homepage.html">HOME</a></li>
@@ -38,7 +44,11 @@
                 <br />
                 <a href="https://www.jokercomics.es/">https://www.jokercomics.es/</a><br />
                 <br />
+                <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\asideleftsearch1.jpg" class="img-responsive" alt="miniature_Dwarf" title="Dwarf Fighter" />
+                <img id="logo" src="C:\Users\Jon\Pictures\Cuadros\D&D\asideleftsearch2.jpg" class="img-responsive" alt="miniature_Human" title="Human Barbarian" />
             </div>
+
+            <!-- Aqui se desarrolla el primer dropdown de busqueda a la API -->
             <div class="col-md-6 col-md-6-offset" id="main_form">
                 <h2 id="par_form1">Bienvenido a la base de datos de Dungeons & Dragons.</h2>
                 <br />
@@ -51,32 +61,30 @@
                     <option value="skills">Habilidades</option>
                 </select>
 
+                <!-- Aqui se inserta la respuesta a la elección del primer dropdown en nuevos dropdown -->
+                <select class="target2" id="answer1" hidden></select>
 
-
-                <select class="targetSkills" id="answerSkills1" hidden></select>
-                <select class="targetClasses" id="answerClasses1" hidden></select>
-                <select class="targetRaces" id="answerRaces1" hidden></select>
-
-
+                <!-- Aqui se devuelven las busquedas finales  -->
                 <div class="row">
-                    <ul id="answerEquipment"></ul>
+                    <ul id="answer2"></ul>
                 </div>
-                <div class="row">
-                    <ul id="answerMonster"></ul>
-                </div>
-                
-                <div class="" id="answerSkills2"></div>
-                <div class="" id="answerClasses2"></div>
-                <div class="" id="answerRaces2"></div>
 
+                <div class="" id="answer2"></div>
 
-
+                <!-- Aqui se inserta la ultima busqueda, que es lo que se obtiene del local storage? -->
+                <!--<div class="col-md-6 col-md-6-offset" id="last_search">
+                    <h2>Última Busqueda: </h2>
+                    <input class="lastS" type="button" value="Last Search" />
+                    <p id="answer3"></p>
+                </div>-->
 
             </div>
+
+            <!-- A partir de aquí se termina la estructura fisica de la pagina -->
             <div class="col-md-3 col-md-3-offset" id="asideright_form">
-                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asiderightsearch.jpg" class="img-responsive" alt="minature" title="Miniatura" />
-                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asidesrightsearch2.jpg" class="img-responsive" alt="minature" title="Miniatura" />
-                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asiderightsearch3.jpg" class="img-responsive" alt="minature" title="Miniatura" />
+                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asiderightsearch.jpg" class="img-responsive" alt="miniature_Human2" title="Human Wizard" />
+                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asidesrightsearch2.jpg" class="img-responsive" alt="miniature_Human3" title="Human Rogue" />
+                <img src="C:\Users\Jon\Pictures\Cuadros\D&D\asiderightsearch3.jpg" class="img-responsive" alt="miniature_Dwarf2" title="Dwarf Warlock" />
             </div>
         </nav>
     </div>
@@ -86,6 +94,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
+    <script src="app.js" charset="iso-8859-1"></script>
 </body>
 </html>
